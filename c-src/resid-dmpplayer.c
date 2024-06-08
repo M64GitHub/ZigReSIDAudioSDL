@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 void ReSIDDmpPlayer_ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, /* ReSID *r , */
                                         ReSIDPbData *d) {
   // dp->R = r;
@@ -83,7 +82,6 @@ int ReSIDDmpPlayer_fill_audio_buffer(ReSIDDmpPlayer *dp) {
   int bufpos = 0;
   int remainder = 0;
   int cycles2do = 0;
-  ;
 
   dp->D->buf_lock = 1;
 
