@@ -1,6 +1,7 @@
 const std = @import("std");
 
 const RDP = @cImport({
+    @cInclude("resid.c");
     @cInclude("resid-dmpplayer.c");
 });
 
@@ -12,9 +13,9 @@ pub fn main() !void {
     var bw = std.io.bufferedWriter(stdout_file);
     const stdout = bw.writer();
 
-    const rp: *RDP.ReSIDDmpPlayer = RDP.ReSIDDmpPlayer_new();
+    const dump_player: *RDP.ReSIDDmpPlayer = RDP.ReSIDDmpPlayer_new();
 
-    RDP.ReSIDDmpPlayer_play(rp);
+    RDP.ReSIDDmpPlayer_play(dump_player);
 
     try stdout.print("lalala\n", .{});
 

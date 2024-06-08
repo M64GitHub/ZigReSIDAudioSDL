@@ -2,6 +2,7 @@
 #define RESID_DMPPLAYER_H
 
 #include "audio-config.h"
+#include "resid.h"
 
 // // instanciate with resid and playback data struct only
 // // ReSIDDmpPlayer_init(ReSID *r, ReSIDPbData *d);
@@ -46,7 +47,7 @@ typedef struct S_ReSIDPbData {
 typedef struct S_SID_Dump_Player_t {
   short outputs[3];
 
-//  ReSID *R;
+  ReSID *R;
   ReSIDPbData *D;
 
   // sid dmp
@@ -58,8 +59,8 @@ typedef struct S_SID_Dump_Player_t {
   int samples2do; // 882
 } ReSIDDmpPlayer;
 
-// void ReSIDDmpPlayer_ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, ReSID *r,
-//                                         ReSIDPbData *d);
+void ReSIDDmpPlayer_ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, ReSID *r,
+                                         ReSIDPbData *d);
 
 void ReSIDDmpPlayer_setDmp(ReSIDDmpPlayer *dp, unsigned char *dump,
                            unsigned int len);
