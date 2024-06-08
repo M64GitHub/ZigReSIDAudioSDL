@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ReSIDDmpPlayer_ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, ReSID *r,
+void ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, ReSID *r,
                                         ReSIDPbData *d) {
   dp->R = r;
   dp->D = d;
@@ -37,7 +37,6 @@ int ReSIDDmpPlayer_update(ReSIDDmpPlayer *dp) {
 void ReSIDDmpPlayer_play(ReSIDDmpPlayer *dp) {
 
   printf("[ReSIDDMPPlayer] PLAY called!\n");
-  ReSID_init(0);
   if (!dp->dmp || !dp->dmp_len)
     return;
 
@@ -124,6 +123,7 @@ int ReSIDDmpPlayer_fill_audio_buffer(ReSIDDmpPlayer *dp) {
 }
 
 ReSIDDmpPlayer *ReSIDDmpPlayer_new() {
+  ReSID_init(0);
   ReSIDDmpPlayer *r = malloc(sizeof(ReSIDDmpPlayer));
 
   return r;
