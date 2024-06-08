@@ -25,7 +25,7 @@ pub fn main() !void {
     const y: i32 = 16;
     const z: i32 = arithmetic.add(x, y);
 
-    const rp: *RDP.struct_S_SID_Dump_Player_t = RDP.ReSIDDmpPlayer_new();
+    const rp: *RDP.ReSIDDmpPlayer = RDP.ReSIDDmpPlayer_new();
 
     RDP.ReSIDDmpPlayer_play(rp);
 
