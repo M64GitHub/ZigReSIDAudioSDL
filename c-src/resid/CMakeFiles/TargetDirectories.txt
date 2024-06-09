@@ -1,0 +1,7 @@
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/resid.dir
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/edit_cache.dir
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/rebuild_cache.dir
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/list_install_components.dir
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/install.dir
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/install/local.dir
+/home/m64/ZIG/space1/ZigReSIDAudioSDL/c-src/resid/CMakeFiles/install/strip.dir
