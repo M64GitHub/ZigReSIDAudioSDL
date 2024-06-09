@@ -5,7 +5,7 @@ const SID = @cImport({
 });
 
 const RDP = @cImport({
-    @cInclude("resid.h");
+    @cInclude("resid.c");
     @cInclude("resid-dmpplayer.c");
 });
 
