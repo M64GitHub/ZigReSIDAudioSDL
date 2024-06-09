@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "resid.h"
 
 // ReSID::ReSID()
@@ -130,4 +131,11 @@ void ReSID_precalc_constants(ReSID *resid)
     printf("[ReSID] samples per frame : %d (%f)\n", resid->SAMPLES_PER_FRAME, d1);
     printf("[ReSID] cycles  per frame : %d (%f)\n", resid->CYCLES_PER_FRAME, d2 - 0.5);
     printf("[ReSID] cycles  per sample: %f\n", resid->CYCLES_PER_SAMPLE);
+}
+
+
+ReSID *ReSID_new() {
+  ReSID *r = malloc(sizeof(ReSID));
+
+  return r;
 }

@@ -28,7 +28,6 @@
 // int fill_audio_buffer();
 // int set_next_regs(); // called on each frame by fill_audio_buffer
 
-
 typedef struct S_ReSIDPbData {
   short buf1[CFG_AUDIO_BUF_SIZE + 1];
   short buf2[CFG_AUDIO_BUF_SIZE + 1];
@@ -42,7 +41,6 @@ typedef struct S_ReSIDPbData {
   unsigned long stat_buf_underruns;
   unsigned long stat_framectr;
 } ReSIDPbData;
-
 
 typedef struct S_SID_Dump_Player_t {
   short outputs[3];
@@ -59,8 +57,7 @@ typedef struct S_SID_Dump_Player_t {
   int samples2do; // 882
 } ReSIDDmpPlayer;
 
-void ReSIDDmpPlayer_ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, ReSID *r,
-                                         ReSIDPbData *d);
+void ReSIDDmpPlayer_ReSIDDmpPlayer_init(ReSIDDmpPlayer *dp, ReSIDPbData *d);
 
 void ReSIDDmpPlayer_setDmp(ReSIDDmpPlayer *dp, unsigned char *dump,
                            unsigned int len);
@@ -80,6 +77,5 @@ int ReSIDDmpPlayer_set_next_regs(ReSIDDmpPlayer *dp);
 int ReSIDDmpPlayer_fill_audio_buffer(ReSIDDmpPlayer *dp);
 
 ReSIDDmpPlayer *ReSIDDmpPlayer_new();
-
 
 #endif

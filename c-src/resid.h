@@ -27,6 +27,8 @@ typedef struct S_ReSID_t {
   // SID sid;    // NOTE:  <=================================== C++ obj
 } ReSID;
 
+ReSID *ReSID_new();
+
 void ReSID_init(ReSID *resid);
 
 void ReSID_writeRegs(ReSID *resid, unsigned char *regs, int len);
